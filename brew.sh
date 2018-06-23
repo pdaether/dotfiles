@@ -102,6 +102,8 @@ brew install gcc
 brew install git-extras
 brew install tig
 brew install pinentry
+brew install subversion
+brew install thefuck
 
 # Install nvm and nodejs
 brew install nvm
