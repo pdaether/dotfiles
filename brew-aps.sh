@@ -3,6 +3,9 @@
 brew install docker-completion
 brew install docker-compose-completion
 brew install docker-machine-completion
+brew install docker-machine-driver-xhyve
+sudo chown root:wheel /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+sudo chmod u+s /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 
 brew tap caskroom/cask
 #brew cask install atom
