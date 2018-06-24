@@ -39,6 +39,8 @@ brew cask install wifi-explorer
 brew cask install visual-studio-code
 brew cask install hipchat
 brew cask install clipy
+brew cask install java
+brew cask install sourcetree
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
