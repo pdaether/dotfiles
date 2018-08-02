@@ -42,6 +42,10 @@ brew cask install clipy
 brew cask install java
 brew cask install sourcetree
 
+# osxfuse and sshfs
+brew cask install osxfuse
+brew install sshfs
+
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
