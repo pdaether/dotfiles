@@ -105,6 +105,11 @@ brew install pinentry
 brew install subversion
 brew install thefuck
 
+brew install bat # cat replacement https://github.com/sharkdp/bat
+brew install peco # https://github.com/peco/peco
+brew install tldr # https://tldr.sh/
+brew install ripgrep # Search in files https://github.com/BurntSushi/ripgrep
+
 # Install nvm and nodejs
 brew install nvm
 
