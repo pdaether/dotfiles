@@ -131,4 +131,6 @@ load-nvmrc() {
  fi
 }
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+
 cd() { builtin cd "$@"; 'load-nvmrc'; }
