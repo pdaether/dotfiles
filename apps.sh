@@ -6,7 +6,7 @@ nala install bat -y
 # Install via binary: https://the.exa.website/install/linux
 nala install eza -y
 nala install htop -y
-nala install neofetch -y
+nala install fastfetch -y
 nala install nmap -y
 # Filter for shell https://github.com/peco/peco
 nala install peco -y
