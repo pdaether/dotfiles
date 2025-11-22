@@ -23,6 +23,8 @@ alias ga="git add"
 alias gc="git commit"
 alias lg="lazygit"
 
+alias ld="lazydocker"
+
 nah() {
     git reset --hard
     git clean -df
