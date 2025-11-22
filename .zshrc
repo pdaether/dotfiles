@@ -116,7 +116,6 @@ unset file;
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 
-eval "$(oh-my-posh init zsh --config ~/dotfiles/M365Princess.omp.json)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -134,3 +133,6 @@ load-nvmrc() {
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 
 cd() { builtin cd "$@"; 'load-nvmrc'; }
+
+# Starship Prompt
+eval "$(starship init zsh)"
