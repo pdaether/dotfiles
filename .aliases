@@ -51,11 +51,11 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 alias ls="command ls ${colorflag}"
 
 alias la='ls -A'
-alias l='exa -lg --icons'
-alias ll='exa -lag --icons'
-alias lt='exa -lagT --icons'
-alias lt1='exa -lagT -L 1 --icons'
-alias l2='exa -lagT -L 2 --icons'
+alias l='eza -lg --icons'
+alias ll='eza -lag --icons'
+alias lt='eza -lagT --icons'
+alias lt1='eza -lagT -L 1 --icons'
+alias l2='eza -lagT -L 2 --icons'
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
