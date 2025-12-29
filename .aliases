@@ -9,7 +9,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents"
+alias docs="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
@@ -24,7 +24,10 @@ alias gc="git commit"
 alias lg="lazygit"
 
 alias ld="lazydocker"
+# Show running docker containers
+alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 
+# Reset current git repository to a clean state
 nah() {
     git reset --hard
     git clean -df
@@ -53,20 +56,30 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 alias ls="command ls ${colorflag}"
 
 alias la='ls -A'
+complete -F _eza la
 alias l='eza -lg --icons'
+complete -F _eza l
 alias ll='eza -lag --icons'
+complete -F _eza ll
 alias lt='eza -lagT --icons'
+complete -F _eza lt
 alias lt1='eza -lagT -L 1 --icons'
-alias l2='eza -lagT -L 2 --icons'
+complete -F _eza lt1
+alias lt2='eza -lagT -L 2 --icons'
+complete -F _eza lt2
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias fd='fdfind'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+
+# Re-run last command with sudo
+alias pls='sudo $(fc -ln -1)'
 
 # Get week number
 alias week='date +%V'
@@ -88,6 +101,9 @@ alias pbpaste='xclip -selection clipboard -o'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Update system packages
+alias update='sudo apt update && sudo apt full-upgrade && sudo flatpak update'
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
@@ -133,4 +149,7 @@ composer-link() {
 alias tl='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach'
+
+# Gen a password
+alias passgen='openssl rand -base64 30 | tee >(cat) | pbcopy && echo "... was copied to the clippboard."'
 

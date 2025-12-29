@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/home/patrick/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
@@ -130,9 +137,23 @@ load-nvmrc() {
  fi
 }
 
+# for the yazi file manager:
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 
 cd() { builtin cd "$@"; 'load-nvmrc'; }
 
+eval "$(zoxide init --cmd cd zsh)"
+
 # Starship Prompt
 eval "$(starship init zsh)"
+
+# opencode
+export PATH=/home/patrick/.opencode/bin:$PATH
