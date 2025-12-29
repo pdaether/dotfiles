@@ -50,23 +50,23 @@ fi
 #alias ll="ls -laF ${colorflag}"
 
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias lsd="ls -laF ${colorflag} | grep --color=never '^d'"
 
 # Always use color output for `ls`
-alias ls="command ls ${colorflag}"
+alias ls="command ls --color=auto"
 
 alias la='ls -A'
-complete -F _eza la
-alias l='eza -lg --icons'
-complete -F _eza l
-alias ll='eza -lag --icons'
-complete -F _eza ll
-alias lt='eza -lagT --icons'
-complete -F _eza lt
-alias lt1='eza -lagT -L 1 --icons'
-complete -F _eza lt1
-alias lt2='eza -lagT -L 2 --icons'
-complete -F _eza lt2
+compdef _eza la
+alias l='eza -lg --icons=always'
+compdef _eza l
+alias ll='eza -lag --icons=always'
+compdef _eza ll
+alias lt='eza -lagT --icons=always'
+compdef _eza lt
+alias lt1='eza -lagT -L 1 --icons=always'
+compdef _eza lt1
+alias lt2='eza -lagT -L 2 --icons=always'
+compdef _eza lt2
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -152,4 +152,3 @@ alias ta='tmux attach'
 
 # Gen a password
 alias passgen='openssl rand -base64 30 | tee >(cat) | pbcopy && echo "... was copied to the clippboard."'
-
