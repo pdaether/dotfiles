@@ -8,6 +8,7 @@ nala install bat -y
 nala install eza -y
 nala install htop -y
 nala install fastfetch -y
+nala install ffmpeg -y
 nala install fd-find -y
 nala install fzf -y
 nala install git -y
@@ -17,6 +18,8 @@ nala install nmap -y
 # Filter for shell https://github.com/peco/peco
 nala install peco -y
 nala install poppler-utils -y
+# Render svg in yazi:
+nala install resvg -y
 nala install ripgrep -y
 nala install starship -y
 # For symlinking the dotfiles: https://www.gnu.org/software/stow/

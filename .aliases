@@ -68,6 +68,8 @@ compdef _eza lt1
 alias lt2='eza -lagT -L 2 --icons=always'
 compdef _eza lt2
 
+alias bat='batcat'
+
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
@@ -152,3 +154,12 @@ alias ta='tmux attach'
 
 # Gen a password
 alias passgen='openssl rand -base64 30 | tee >(cat) | pbcopy && echo "... was copied to the clippboard."'
+
+# Suffix aliases
+alias -s md='bat'
+alias -s php="$EDITOR"
+alias -s js="$EDITOR"
+alias -s ts="$EDITOR"
+alias -s png="open"
+alias -s jpg="open"
+alias -s jpeg="open"
