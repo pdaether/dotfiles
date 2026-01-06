@@ -2,6 +2,7 @@ nala install 7zip -y
 # Replacement for cat with syntax highlighting
 # https://github.com/sharkdp/bat
 nala install bat -y
+nala install cloc -y
 # Replacenent for ls
 # Eza is not as good as exa, I don't know why it's not available in the repo anymore
 # Install via binary: https://the.exa.website/install/linux
