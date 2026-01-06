@@ -50,4 +50,12 @@ else
     echo "Skipping valet.sh setup"
 fi
 
+# Run gh.sh
+echo "Running gh.sh..."
+./gh.sh
+if [ $? -ne 0 ]; then
+    echo "Error: gh.sh failed"
+    exit 1
+fi
+
 echo "Setup process completed successfully!"
